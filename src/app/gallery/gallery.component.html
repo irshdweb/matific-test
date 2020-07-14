@@ -1,0 +1,37 @@
+<swiper [config]="config">
+ 
+    <h3>Try some of our maths activities...</h3>
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide" *ngFor="let slide of slideData">
+        <img src="../../assets/images/gallery/{{slide.img}}" alt="" />
+        <div class="clearfix"></div>
+        <div class="col-12 info">
+          <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Homepage-v4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Homepage-Overhaul-[02-Desktop-Min]---01-Default" transform="translate(-48.000000, -742.000000)">
+                      <g id="Demos" transform="translate(32.000000, 556.000000)">
+                          <g id="Rectangle-Copy-7">
+                              <g id="Text" transform="translate(16.000000, 186.000000)">
+                                  <g id="Button/Play-Demo-Copy">
+                                      <rect id="BG" stroke="#00C3B8" stroke-width="2" x="1" y="1" width="22" height="22" rx="11"></rect>
+                                      <polygon id="Path" fill="#00C3B8" points="9.75 7.5 9.75 16.5 16.5 12"></polygon>
+                                  </g>
+                              </g>
+                          </g>
+                      </g>
+                  </g>
+              </g>
+          </svg>
+          {{slide.name}}</div>
+      </div>
+
+  
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</swiper>
+
+
+

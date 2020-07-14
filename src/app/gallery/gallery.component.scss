@@ -1,0 +1,70 @@
+@import './../../scss/variables';
+@import './../../scss/mixin';
+@import './../../scss/reset';
+
+h3{
+    margin-top:100px;
+    color:$white;
+    padding:0;
+    font-size:$gallery_h3;
+    text-align:center;
+    margin-bottom:50px;
+    @include for-small{
+        margin-top:20px;
+    }
+}
+.swiper-wrapper{
+    padding-left:30px;
+    padding-bottom:100px;
+    //box-sizing: border-box;
+    
+    .swiper-slide{
+        max-width:360px;
+        background:$white;
+        margin-right:40px;
+        height:301px;
+        -webkit-box-shadow: -4px 21px 49px -16px rgba(0,0,0,0.27);
+        -moz-box-shadow: -4px 21px 49px -16px rgba(0,0,0,0.27);
+        box-shadow: -4px 21px 49px -16px rgba(0,0,0,0.27);
+        @include border-radius(5px);
+
+
+        img{
+            width:100%;
+            @include border-radius(5px, 5px, 0, 0);
+        }
+        
+
+        .info{
+            font-size:$info_size;
+            font-weight:700;
+            margin-top:20px;
+
+            svg{
+                float:left;
+                margin-top:4px;
+                margin-right:14px;
+            }
+        }
+    }
+    @include for-medium-large{
+        height:auto !important;
+        .swiper-slide{
+            height:250px;
+
+            .info{
+                margin-top:10px;
+            }
+        }
+    }
+
+    @include for-small{
+        .swiper-slide{
+            height:275px;
+            max-width:320px;
+            .info{
+                margin-top:20px;
+            }
+        }
+    }
+}

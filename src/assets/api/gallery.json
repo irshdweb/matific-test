@@ -1,0 +1,29 @@
+{
+    "thumbs": [
+      {
+        "id": 1,
+        "name": "Episodes",
+        "img": "episodes.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Worksheets",
+        "img": "worksheets.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Word Problem",
+        "img": "wordproblem.png"
+      },
+      {
+        "id": 2,
+        "name": "Brain Teasers",
+        "img": "Brainteasers.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Episodes",
+        "img": "episodes.jpg"
+      }
+    ]
+  }

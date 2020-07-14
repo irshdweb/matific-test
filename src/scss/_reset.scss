@@ -1,0 +1,29 @@
+body {
+	font-family: $primary_font;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $primary_font;
+    margin:0;
+    padding:0;
+    font-weight:normal;
+}
+
+a {
+	text-decoration: none;
+    @include transition (all, 0.5s, ease-in-out);
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		outline: none;
+	}
+}
+
+button:focus {
+	outline: none;
+	box-shadow: none;
+}

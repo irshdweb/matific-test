@@ -1,0 +1,52 @@
+@import './../../../scss/variables';
+@import './../../../scss/mixin';
+@import './../../../scss/reset';
+
+ul{
+    margin-top:30px;
+    padding:10px;
+    li{
+        list-style: none;
+        display:block;
+
+        a{
+            color:$black;
+            height:50px;
+            display:flex;
+            align-items: center;
+            border-bottom:1px solid $black_line;
+            margin-left:0;
+            width:100%;
+        }
+        &.log{
+            a{
+                @extend  %toolbar-button;
+                margin-top:10px;
+                border:2px solid $nav_hover;
+                display:flex;
+                justify-content: center;
+                &:hover{
+                    background:$nav_hover;
+                    border:2px solid $nav_hover;
+                    color:$white;
+                }
+            }
+            
+            &.trial{
+                a{
+                    background:$nav_hover;
+                    border:2px solid $nav_hover;
+                    color:$white;
+                    &:hover{
+                        border:2px solid $nav_hover;
+                        color:$nav_hover;
+                        background:none;
+                    }
+                }
+            }
+    
+           
+        }
+    }
+
+}

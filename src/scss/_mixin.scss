@@ -1,0 +1,130 @@
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: $what $time $how;
+    -moz-transition:    $what $time $how;
+    -ms-transition:     $what $time $how;
+    -o-transition:      $what $time $how;
+    transition:         $what $time $how;
+}
+@mixin border-radius($top-left:10px, $top-right:null, $bottom-right:null, $bottom-left:null){
+    -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+       -moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+        -ms-border-radius: $top-left $top-right $bottom-right $bottom-left;
+            border-radius: $top-left $top-right $bottom-right $bottom-left;  
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+      -webkit-box-shadow:inset $top $left $blur $color;
+      -moz-box-shadow:inset $top $left $blur $color;
+      box-shadow:inset $top $left $blur $color;
+    } @else {
+      -webkit-box-shadow: $top $left $blur $color;
+      -moz-box-shadow: $top $left $blur $color;
+      box-shadow: $top $left $blur $color;
+    }
+}
+
+@mixin for-large {
+  @media (max-width: 1500px) { @content; }
+}
+@mixin for-medium-large {
+  @media (max-width: 1330px) { @content; }
+}
+@mixin for-ipan-flat {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin for-mobile {
+  @media (max-width: 840px) { @content; }
+}
+
+@mixin for-small {
+    @media (max-width: 640px) { @content; }
+}
+
+
+%toolbar-button{
+    border:2px solid $white;
+    height:53px;
+    padding-left:32px;
+    padding-right:32px;
+    @include border-radius(2px);
+    display:flex;
+    align-items: center;
+    @include for-ipan-flat{
+        padding-left:22px;
+        padding-right:22px;
+        height:40px;
+    }
+}
+
+@mixin toolbarbg {
+  background:$white;
+  @include box-shadow(2px, 0px, 4px, rgba(0, 0, 0, 0.5));
+  .container{
+      svg{
+          display:none;
+      }
+      .logo{
+          display:block;
+      }
+      .country-panel{
+          color:$black;
+      }
+      .call-area{
+          .icon, a{
+              color:$black;
+          }
+      }
+      .main-nav{
+          ul{
+              li{
+                  a{
+                      color:$black;
+                      &:hover{
+                          color:$nav_hover;
+                      }
+                  }
+
+                  &.log{
+                      
+                      a{
+                          border:2px solid $nav_hover;
+                          color:$nav_hover;
+
+                          &:hover{
+                              color:$white;
+                          }
+                      }
+                     
+                      &.trial{
+                          a{
+                              color:$white;
+
+                              &:hover{
+                                  color:$nav_hover;
+                                  border:2px solid $nav_hover;
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+
+      @include for-mobile {
+        .mob-icon{
+            .icon-round{
+                svg{
+                    display:block !important;
+                }
+            }
+        }
+
+        .call{
+            .icon{
+                color:$nav_hover;
+            }
+        }
+      }
+  }
+}
